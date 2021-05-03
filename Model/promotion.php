@@ -3,15 +3,15 @@ class Promotion {
 	private $id_promo;
 	private $date_debut;
 	private $date_fin;
-	private $id_produit;
+	private $idArticle;
 	private $nouv_prix;
 
 	
-	function __construct($id_promo,$date_debut,$date_fin,$id_produit,$nouv_prix){
+	function __construct($id_promo,$date_debut,$date_fin,$idArticle,$nouv_prix){
 		$this->id_promo=$id_promo;
 		$this->date_debut=$date_debut;
 		$this->date_fin=$date_fin;
-		$this->id_produit=$id_produit;
+		$this->idArticle=$idArticle;
 				$this->nouv_prix=$nouv_prix;
 
 	}
@@ -25,8 +25,8 @@ class Promotion {
 	function getDate_fin(){
 		return $this->date_fin;
 	}
-	function getid_produit(){
-		return $this->id_produit;
+	function getidArticle(){
+		return $this->idArticle;
 	}
     function getNouv_prix(){
 		return $this->nouv_prix;
@@ -45,8 +45,8 @@ class Promotion {
 	function setDate_fin($Date_fin){
 		$this->date_fin=$date_fin;
 	}
-	function setid_produit($id_produit){
-		$this->id_produit=$id_produit;
+	function setidArticle($idArticle){
+		$this->idArticle=$idArticle;
 	}
 	function setNouv_prix($nouv_prix){
 		$this->nouv_prix=$nouv_prix;

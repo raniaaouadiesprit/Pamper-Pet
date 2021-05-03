@@ -1,17 +1,19 @@
 <?PHP
-include "../config.php";
+    require_once '../config.php';
+	
+	
 class PromotionC {
 function afficherPromotion ($promotion){
 		echo "id: ".$promotion->getId_promo()."<br>";
 		echo "Date Debut: ".$promotion->getDate_debut()."<br>";
 		echo "Date Fin: ".$promotion->getDate_fin()."<br>";
-		echo "Id produit: ".$promotion->getid_produit()."<br>";
+		echo "id Article: ".$promotion->getidArticle()."<br>";
 		echo "Nouveau Prix: ".$promotion->getNouv_prix()."<br>";
 
 	}
 	
 	function ajouterPromotion($promotion){
-		$sql="insert into promotion (id_promo,date_debut,date_fin,id_produit,nouv_prix) values (:id_promo, :date_debut,:date_fin,:id_produit,:nouv_prix)";
+		$sql="insert into promotion (id_promo,date_debut,date_fin,idArticle,nouv_prix) values (:id_promo, :date_debut,:date_fin,:idArticle,:nouv_prix)";
 		$db = config::getConnexion();
 		try{
         $req=$db->prepare($sql);
@@ -19,13 +21,13 @@ function afficherPromotion ($promotion){
         $id_promo=$promotion->getId_promo();
         $date_debut=$promotion->getDate_debut();
         $date_fin=$promotion->getDate_fin();
-        $id_produit=$promotion->getid_produit();
+        $idArticle=$promotion->getidArticle();
 		$nouv_prix=$promotion->getNouv_prix();
 
 		$req->bindValue(':id_promo',$id_promo);
 		$req->bindValue(':date_debut',$date_debut);
 		$req->bindValue(':date_fin',$date_fin);
-		$req->bindValue(':id_produit',$id_produit);
+		$req->bindValue(':idArticle',$idArticle);
 		$req->bindValue(':nouv_prix',$nouv_prix);
 
 		
@@ -66,7 +68,7 @@ function afficherPromotion ($promotion){
 	
 	
 	function modifierPromotion($promotion,$id_promo){
-		$sql="UPDATE promotion SET id_promo=:id_promo, date_debut=:date_debut,date_fin=:date_fin,id_produit=:id_produit,nouv_prix=:nouv_prix WHERE id_promo=:id_promo";
+		$sql="UPDATE promotion SET id_promo=:id_promo, date_debut=:date_debut,date_fin=:date_fin,idArticle=:idArticle,nouv_prix=:nouv_prix WHERE id_promo=:id_promo";
 		
 		$db = config::getConnexion();
 		//$db->setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
@@ -75,15 +77,15 @@ try{
 		$id_promoo=$promotion->getId_promo();
         $date_debut=$promotion->getDate_debut();
         $date_fin=$promotion->getDate_fin();
-        $id_produit=$promotion->getid_produit();
+        $idArticle=$promotion->getidArticle();
 		 $nouv_prix=$promotion->getNouv_prix();
 
-		$datas = array(':id_promoo'=>$id_promoo, ':id_promo'=>$id_promo, ':date_debut'=>$date_debut,':date_fin'=>$date_fin,':id_produit'=>$id_produit,':nouv_prix'=>$nouv_prix);
+		$datas = array(':id_promoo'=>$id_promoo, ':id_promo'=>$id_promo, ':date_debut'=>$date_debut,':date_fin'=>$date_fin,':idArticle'=>$idArticle,':nouv_prix'=>$nouv_prix);
 		$req->bindValue(':id_promoo',$id_promoo);
 		$req->bindValue(':id_promo',$id_promo);
 		$req->bindValue(':date_debut',$date_debut);
 		$req->bindValue(':date_fin',$date_fin);
-		$req->bindValue(':id_produit',$id_produit);
+		$req->bindValue(':idArticle',$idArticle);
 				$req->bindValue(':nouv_prix',$nouv_prix);
 
 		
@@ -110,6 +112,29 @@ try{
             die('Erreur: '.$e->getMessage());
         }
 	}
+	
+	
+	
+	public	function countPromotion()
+        {
+			$sql="SELECT COUNT(*) From promotion";
+		$db = config::getConnexion();
+
+            
+         try{
+           $liste=$db->query($sql);
+		return $liste;
+        }
+        catch (Exception $e){
+            die('Erreur: '.$e->getMessage());
+        }
+
+            $row=$stmt->fetchColumn();
+
+            return $row;
+
+        }
+
 	
 	
 }
