@@ -12,9 +12,8 @@ function afficherevenment ($evenment){
 		echo "type_evn: ".$evenment->getType_evn()."<br>";
 
 	}
-	/*function calculerSalaire($evenment){
-		echo $evenment->getNbHeures() * $evenment->getTarifHoraire();
-	}*/
+	
+	
 	function ajouterEvenment($evenment){
 		$sql="insert into evenment (id,nbr_invt,nom_evn,date_evn,type_evn) values (:id, :nbr_invt,:nom_evn,:date_evn,:type_evn)";
 		$db = config::getConnexion();
@@ -123,7 +122,16 @@ try{
             die('Erreur: '.$e->getMessage());
         }
 	}
-	  function loginusers($mail, $mdp)
+	
+	
+	
+	
+	
+	
+	
+	
+	/*	function loginusers($mail, $mdp)
+	
     {
 
         $sql = "SElECT * From user where username='" . $mail . "' and password='" . $mdp . "'";
@@ -137,39 +145,20 @@ try{
         }
     }
 
+	}*/
 
-	public function countEvenment()
-        {
-			$sql="SELECT COUNT(*) FROM evenment";
-		$db = config::getConnexion();
 
-            
-         try{
-           $liste=$db->query($sql);
-		return $liste;
-        }
-        catch (Exception $e){
-            die('Erreur: '.$e->getMessage());
-        }
 
-            $row=$stmt->fetchColumn();
 
-            return $row;
 
-        }
 
-/*	function rechercherListeEvenment($tarif){
-		$sql="SELECT * from evenment where tarifHoraire=$tarif";
-		$db = config::getConnexion();
-		try{
-		$liste=$db->query($sql);
-		return $liste;
-		}
-        catch (Exception $e){
-            die('Erreur: '.$e->getMessage());
-        }
-	}
-	*/
+	
+
+
+
+
+
+
 	
 	
 }

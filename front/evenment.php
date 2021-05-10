@@ -138,6 +138,20 @@ $listeEvenments=$evenmentC->afficherEvenments();
             <h4 class="h3 mb-3 text-black">liste des  Evenements</h4>
           </div>
          
+		 
+		 
+		 
+		   
+              </div>
+			                </div>
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
 		  <div class="row">
                     <div class="col-12">
                         <div class="card">

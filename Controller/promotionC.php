@@ -115,25 +115,12 @@ try{
 	
 	
 	
-	public	function countPromotion()
-        {
-			$sql="SELECT COUNT(*) From promotion";
-		$db = config::getConnexion();
+	
+	
+	
+	
+	
 
-            
-         try{
-           $liste=$db->query($sql);
-		return $liste;
-        }
-        catch (Exception $e){
-            die('Erreur: '.$e->getMessage());
-        }
-
-            $row=$stmt->fetchColumn();
-
-            return $row;
-
-        }
 
 	
 	

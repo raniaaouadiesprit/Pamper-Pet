@@ -25,6 +25,13 @@
 
 <script>
 
+
+
+
+
+
+
+
 function validate()
 {
 var iddd = document.getElementById("idd");
@@ -405,7 +412,7 @@ return true;
 </tr>
 <tr>
 <td>Nombre d'invites</td>
-<td><input type="number" name="nbr_invt" id="nbr"  value="0" ></td>
+<td><input type="number" name="nbr_invt" id="nbr"  ></td>
 </tr>
 <tr>
 <td>Nom_evenment</td>
@@ -413,7 +420,7 @@ return true;
 </tr>
 <tr>
 <td>Date Evenment</td>
-<td><input type="date" name="date_evn" id="datee"></td>
+<td><input type="date"  name="date_evn" id="datee" min ="" ></td>
 </tr>
 <tr>
 <td>type_evenment</td>
@@ -433,6 +440,30 @@ return true;
 	</tr>
 
 </table>	
+
+
+
+
+
+<div id="google_translate_element"></div>
+	<script>
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+            {pageLanguage: 'en'},
+            'google_translate_element'
+        );
+    }
+</script>
+<script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+
+
+
+
+
+
+
                     </div> 
                 </div> 
                 <!-- ============================================================== -->

@@ -5,6 +5,9 @@ $listePromotions=$promotion1C->afficherPromotions();
 
 //var_dump($listePromotions->fetchAll());
 ?>
+
+
+
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 
@@ -387,28 +390,43 @@ foreach($listePromotions as $row){
 									 <!--<input type="submit" value="trier"> </input>-->
 									
 									</form>
-									
-									
 
-	
-	
-	
-	
-	
-	<div class="imprimer">
+<div class="imprimer">
+
+            <!-- ============================================================== 
+
         <input id="impression" name="impression" class="btn btn-primary" type="submit" onclick="imprimer_page()" value="Imprimer la Page" />
-      </div>
- 
-       <script type="text/javascript">
-            function imprimer_page(){
-            window.print();
-             }
-        </script>
+            <!-- ============================================================== -->
+     
+	 </div>
+	  
+      <a align="right" name="impression" id="impression" onclick="imprimer_page()" type="submit" ><img src="../Back/assets/images/print.jpg" alt="stats" style="width:60px;height:50px;"></a>
+      <br></br>
+    
 
-<br><br><br>
 									
-                                </div>
+									
 
+	
+
+
+
+	
+	
+	<div id="google_translate_element"></div>
+	<script>
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+            {pageLanguage: 'en'},
+            'google_translate_element'
+        );
+    }
+</script>
+<script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+	
+
+</div>
                             </div>
                         </div>
                     </div>
@@ -464,12 +482,37 @@ foreach($listePromotions as $row){
     <script src="assets/extra-libs/multicheck/datatable-checkbox-init.js"></script>
     <script src="assets/extra-libs/multicheck/jquery.multicheck.js"></script>
     <script src="assets/extra-libs/DataTables/datatables.min.js"></script>
-    <script>
+   
+
+
+   <script>
+	
+	
+	
         /****************************************
          *       Basic Table                   *
          ****************************************/
         $('#zero_config').DataTable();
     </script>
+	
+	
+	
+	
+	
+	<div class="imprimer">
+        <input id="impression" name="impression" class="btn btn-primary" type="submit" onclick="imprimer_page()" value="Imprimer la Page" />
+      </div>
+ 
+       <script type="text/javascript">
+            function imprimer_page(){
+            window.print();
+             }
+        </script>
+
+<br><br><br>
+ </div>
+
+
 
 </body>
 

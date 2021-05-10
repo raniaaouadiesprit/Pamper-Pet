@@ -431,6 +431,23 @@ return true;
 	</tr>
 
 </table>	
+
+<div class="imprimer">
+        <input id="impression" name="impression" class="btn btn-primary" type="submit" onclick="imprimer_page()" value="Imprimer la Page" />
+      </div>
+ 
+       <script type="text/javascript">
+            function imprimer_page(){
+            window.print();
+             }
+        </script>
+
+<br><br><br>
+									
+                                </div>
+
+
+
                     </div> 
                 </div> 
                 <!-- ============================================================== -->

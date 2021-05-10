@@ -1,3 +1,4 @@
+
 <?PHP
 include "../Controller/evenmentC.php";
 $evenment1C=new EvenmentC();
@@ -401,8 +402,7 @@ foreach($listeEvenments as $row){
       </div>
       <a align="right" name="impression" id="impression" onclick="imprimer_page()" type="submit" ><img src="../Back/assets/images/print.jpg" alt="stats" style="width:60px;height:50px;"></a>
       <br></br>
-      <a align="right" href="stats.php"><img src="../Back/assets/images/stats.jpg" alt="stats" style="width:60px;height:50px;"></a>
-      <br></br>
+      
       <a align="right" href="exportexel.php"><img src="../Back/assets/images/excel.png" alt="stats" style="width:60px;height:50px;"></a>
 
  
@@ -413,6 +413,28 @@ foreach($listeEvenments as $row){
         </script>
 
 <br><br><br>
+
+
+<div id="google_translate_element"></div>
+	<script>
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+            {pageLanguage: 'en'},
+            'google_translate_element'
+        );
+    }
+</script>
+<script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+
+
+
+
+
+
+
+
                                 </div>
 
                             </div>
