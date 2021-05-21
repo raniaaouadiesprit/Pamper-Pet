@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Inscription</title>
+<br>
+</head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta:300,400,700"> 
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/signup.css" >
+
+<body>
+	<script defer type="javascript" src="js/verifinscr.js"></script>
+	<div align="center">
+<form method="POST" onsubmit="verif()" action="./View/AjouterClient.php" name="insc" id="insc">
+
+
+
+
+
+<div class="site-wrap">
+    
+
+    <div class="site-navbar bg-white py-2">
+
+      <div class="search-wrap">
+        <div class="container">
+          <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
+          <form action="#" method="post">
+            <input type="text" class="form-control" placeholder="Search keyword and hit enter...">
+          </form>  
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="logo">
+            <div class="site-logo">
+              <a href="index.html" class="js-logo-clone">Pamper Pet</a>
+            </div>
+          </div>
+          <div class="main-nav d-none d-lg-block">
+            <nav class="site-navigation text-right text-md-center" role="navigation">
+              <ul class="site-menu js-clone-nav d-none d-lg-block">
+                <li class="has-children active">
+                  <a href="index.html">Home</a>
+                  <ul class="dropdown">
+                    <li><a href="#">Menu One</a></li>
+                    <li><a href="#">Menu Two</a></li>
+                    <li><a href="#">Menu Three</a></li>
+                    <li class="has-children">
+                      <a href="#">Sub Menu</a>
+                      <ul class="dropdown">
+                        <li><a href="#">Menu One</a></li>
+                        <li><a href="#">Menu Two</a></li>
+                        <li><a href="#">Menu Three</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="afficherproduits.php">Produit</a></li>
+
+                <li><a href="shop.php">Shop</a></li>
+                <li><a href="#">Catalogue</a></li>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                      <li><a href="avis.html">Avis</a></li>
+                 <li><a href="Reclamation.html">Reclamation</a></li>
+
+				 <li><a href="evenment.php">Evenment</a></li>
+         <li><a href="inscription.html">S'inscrire</a></li>
+     
+
+              </ul>
+            </nav>
+          </div>
+          <div class="icons">
+            <a href="#" class="icons-btn d-inline-block js-search-open"><span class="icon-search"></span></a>
+            <a href="#" class="icons-btn d-inline-block"><span class="icon-heart-o"></span></a>
+            <a href="cart.html" class="icons-btn d-inline-block bag">
+              <span class="icon-shopping-bag"></span>
+              <span class="number">2</span>
+            </a>
+            <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span class="icon-menu"></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+	<!--webbot bot="SaveResults" U-File="C:\Users\ghaba\Desktop\front\front\_private\form_results.csv" S-Format="TEXT/CSV" S-Label-Fields="TRUE" -->
+	<p> <h1>Inscription</h1></p> <br>
+  <div id="error"></div>
+	<table border="0" cellpadding="5" cellspacing="5" width="332" height="126">
+		<tr>
+			<td height="16" width="225"><label for="NomClient">Nom :</label></td>
+
+			<td height="16" width="97">
+			<input type="text" name="NomClient" id="NomClient" size="20" required></td>
+		</tr>
+		<tr>
+			<td height="26" width="225"><label for="PrenomClient">Prénom :</label></td>
+			<td height="26" width="97">
+			<input type="text" name="PrenomClient" id="PrenomClient" size="20" required></td>
+		</tr>
+		<tr>
+			<td height="31" width="225"><label for="IdClient">ID :</label></td>
+			<td height="31" width="97">
+			<input type="text" name="IdClient" id="IdClient" size="20" required></td>
+		</tr>
+		<tr>
+			<td height="35" width="225"><label for="MdpClient">Mot de passe :</label></td>
+			<td height="35" width="97">
+			<input type="password" name="MdpClient" id="MdpClient" size="20" required></td>
+		</tr>
+		<tr>
+			<td height="35" width="225"><label for="mdpconfirm">Confirmatin mot de passe :</label></td>
+			<td height="35" width="97">
+			<input type="password" name="mdpconfirm" id="mdpconfirm" size="20" required></td>
+		</tr>
+		<tr>
+			<td height="24" width="225"><label for="MdpClient">Mot de passe :</label></td>
+			<td height="24" width="97">
+			<input type="text" name="AdresseClient" id="AdresseClient" size="20" required></td>
+		</tr>
+		<tr>
+			<td height="46" width="225"><label for="EmailClient">EmailClient :</label></td>
+			<td height="46" width="97">
+			<input type="text" name="EmailClient" id="EmailClient" size="20" required></td>
+		</tr>
+		<tr>
+			<td height="46" width="225"><label for="TelClient">Telephone :</label></td>
+			<td height="46" width="97">
+			<input type="text" name="TelClient" id="TelClient" size="20" required></td>
+		</tr>
+		<tr>
+			<td height="46" width="225"><input id="sins"  type="submit" value="Inscritpion" name="B1"></td>
+			<td height="46" width="97"><input type="button" onclick="imprimer()"  value="imprimer mes infos" name="B2"></td>
+		</tr>
+		<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Compte crée avec success</p>
+  </div>
+
+</div>
+
+	</table>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+</form>
+</div>
+</body>
+
+</html>

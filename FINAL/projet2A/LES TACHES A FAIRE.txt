@@ -1,0 +1,40 @@
+
+1/ pour la table promotion :
+
+back :
+id (mnich 3malha bel auto increment ! na3mlouha auto incre 5ir ? //mrigla
+
+-idArticle (combo box ) lazmou w tofla eli m3aya fel table mte3ha 3amletha // mrigla
+ bel auto increment.
+
+-date fin > date debut (controle saisie) //
+-metier eli ma3moulin bel  js (rech, tri ) ( a rejeter ) 9atli na7eha (table basic )
+- ajoute dautres metiers (recherche , tri ) 
+
+front :
+
+
+
+2/pour la table evenment :
+
+back:
+
+date fin > date debut (controle saisie)
+nombre dinvites (mnich 3emlelha controle saisie)
+ajout photo 
+
+changer type evement au combo box (car  on connait les types des evenments )
+
+front : 
+
+metier : statistiques --->  nombre des evements eli akther type 
+(statistiques sur les types des evements )
+
+mail 
+changer laffichage 
+
+
+
+
+
+
